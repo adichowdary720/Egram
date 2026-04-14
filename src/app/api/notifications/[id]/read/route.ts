@@ -23,7 +23,7 @@ export async function PUT(req: Request, { params }: { params: Promise<{ id: stri
 
         return NextResponse.json({ success: true, notification }, { status: 200 });
 
-    } catch (error: any) {
+    } catch (error) {
         console.error("Error marking notification read:", error);
         return NextResponse.json({ error: "Internal Server Error" }, { status: 500 });
     }

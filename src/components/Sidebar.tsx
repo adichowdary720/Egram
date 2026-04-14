@@ -1,3 +1,4 @@
+"use client";
 import { Home, Search, Compass, MessageSquare, PlusSquare, Moon, Sun, User as UserIcon, Bell, Video } from "lucide-react";
 import { User } from "firebase/auth";
 import Link from "next/link";

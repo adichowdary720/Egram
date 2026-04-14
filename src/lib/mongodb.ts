@@ -1,12 +1,7 @@
 import mongoose from 'mongoose';
 
-const MONGODB_URI = process.env.MONGODB_URI!;
-
-if (!MONGODB_URI) {
-    throw new Error(
-        'Please define the MONGODB_URI environment variable inside .env.local'
-    );
-}
+const MONGODB_URI = process.env.MONGODB_URI;
+// Validation moved to runtime to prevent build-time failures on platforms like Netlify.
 
 /**
  * Global is used here to maintain a cached connection across hot reloads
